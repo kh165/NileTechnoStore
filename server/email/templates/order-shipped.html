@@ -1,0 +1,34 @@
+{{> header}}
+<div style="text-align: right;">
+  <div style="display: inline-block; background-color: #dbeafe; color: #1e40af; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 20px; margin-bottom: 16px;">
+    🚀 تم شحن طلبك وفي الطريق إليك
+  </div>
+  <h1 style="margin: 0 0 12px 0; color: #0f172a; font-size: 24px; font-weight: 800; line-height: 1.3;">
+    شحنتك انطلقت الآن، {{customerName}}!
+  </h1>
+  <p style="margin: 0 0 20px 0; color: #334155; font-size: 15px; line-height: 1.7;">
+    تم تسليم طرد طلبك رقم <strong style="color: #2563eb;">#{{orderNumber}}</strong> إلى شركة الشحن المعتمدة. شحنتك الآن في الطريق إلى عنوانك المسجل.
+  </p>
+
+  <!-- Tracking Box -->
+  <div style="background-color: #eff6ff; border: 2px dashed #3b82f6; border-radius: 12px; padding: 20px; margin-bottom: 24px; text-align: center;">
+    <p style="margin: 0 0 6px 0; color: #1e40af; font-size: 13px; font-weight: 600;">رقم تتبع الشحنة (Tracking Number):</p>
+    <div style="font-size: 20px; font-weight: 800; color: #1d4ed8; font-family: monospace; letter-spacing: 2px; margin-bottom: 12px;">
+      {{trackingNumber}}
+    </div>
+    {{#if courierName}}
+    <p style="margin: 0; color: #475569; font-size: 13px;">شركة الشحن: <strong>{{courierName}}</strong></p>
+    {{/if}}
+  </div>
+
+  <div style="margin-bottom: 24px;">
+    {{{itemsTableHtml}}}
+  </div>
+
+  <div style="text-align: center; margin: 28px 0;">
+    <a href="{{frontendUrl}}/?order={{orderNumber}}#account/track" class="btn-primary" style="display: inline-block; background-color: #2563eb; color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700; padding: 14px 32px; border-radius: 10px; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);">
+      تتبع الشحنة على الخريطة 🚀
+    </a>
+  </div>
+</div>
+{{> footer}}

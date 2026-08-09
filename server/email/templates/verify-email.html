@@ -1,0 +1,32 @@
+{{> header}}
+<div style="text-align: right;">
+  <div style="display: inline-block; background-color: #fef3c7; color: #92400e; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 20px; margin-bottom: 16px;">
+    ✉️ تأكيد ملكية البريد الإلكتروني
+  </div>
+  <h1 style="margin: 0 0 16px 0; color: #0f172a; font-size: 24px; font-weight: 800; line-height: 1.3;">
+    تأكيد بريدك الإلكتروني، {{customerName}}
+  </h1>
+  <p style="margin: 0 0 20px 0; color: #334155; font-size: 15px; line-height: 1.7;">
+    شكراً لتسجيلك في متجر Nile Techno. يرجى تأكيد ملكيتك لهذا البريد الإلكتروني لإتمام تفعيل كافة خصائص حسابك وتأمين طلباتك.
+  </p>
+
+  <!-- Action Callout Box -->
+  <div style="background-color: #eff6ff; border-right: 4px solid #2563eb; border-radius: 8px; padding: 20px; margin-bottom: 24px;">
+    <p style="margin: 0; color: #1e40af; font-size: 14px; font-weight: 600; line-height: 1.6;">
+      اضغط على الزر أدناه لتأكيد تفعيل البريد الإلكتروني. هذا الرابط صالِح للاستخدام لمدة 24 ساعة فقط.
+    </p>
+  </div>
+
+  <!-- Primary Action Button -->
+  <div style="text-align: center; margin: 32px 0;">
+    <a href="{{verificationLink}}" class="btn-primary" style="display: inline-block; background-color: #2563eb; color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700; padding: 14px 36px; border-radius: 10px; box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);">
+      تأكيد البريد الإلكتروني الآن ✅
+    </a>
+  </div>
+
+  <p style="margin: 20px 0 0 0; color: #64748b; font-size: 13px; line-height: 1.6;">
+    إذا واجهتك مشكلة في الضغط على الزر، يمكنك نسخ الرابط التالي ولصقه في متصفحك مباشرة:<br>
+    <a href="{{verificationLink}}" style="color: #2563eb; word-break: break-all; font-size: 12px;">{{verificationLink}}</a>
+  </p>
+</div>
+{{> footer}}

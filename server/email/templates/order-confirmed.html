@@ -1,0 +1,49 @@
+{{> header}}
+<div style="text-align: right;">
+  <div style="display: inline-block; background-color: #dcfce7; color: #15803d; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 20px; margin-bottom: 16px;">
+    ✅ تم تأكيد طلبك رسمياً
+  </div>
+  <h1 style="margin: 0 0 12px 0; color: #0f172a; font-size: 24px; font-weight: 800; line-height: 1.3;">
+    خبر رائع، {{customerName}}!
+  </h1>
+  <p style="margin: 0 0 20px 0; color: #334155; font-size: 15px; line-height: 1.7;">
+    تم تأكيد طلبك رقم <strong style="color: #2563eb;">#{{orderNumber}}</strong> بنجاح بعد مراجعة كافة بيانات الشحن والدفع. جاري تحويل الطلب إلى قسم التجهيز والتغليف.
+  </p>
+
+  <div style="background-color: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 18px; margin-bottom: 24px;">
+    <table role="presentation" border="0" cellpadding="4" cellspacing="0" width="100%" style="font-size: 14px; color: #166534;">
+      <tr>
+        <td style="font-weight: 700; width: 35%;">رقم الطلب:</td>
+        <td style="font-weight: 800; font-family: monospace;">#{{orderNumber}}</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 700;">تاريخ التحديث:</td>
+        <td style="font-weight: 600;">{{orderDate}}</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 700;">الحالة الحالية:</td>
+        <td style="font-weight: 800; color: #15803d;"><span style="background-color: #bbf7d0; padding: 3px 10px; border-radius: 12px; font-size: 12px;">مؤكد وبانتظار التجهيز</span></td>
+      </tr>
+      <tr>
+        <td style="font-weight: 700;">إجمالي الطلب:</td>
+        <td style="font-weight: 800; font-size: 16px;">{{totalPrice}} {{currency}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Items Summary Table -->
+  <h3 style="margin: 0 0 12px 0; color: #072d5c; font-size: 16px; font-weight: 700; border-bottom: 2px solid #16a34a; padding-bottom: 6px; display: inline-block;">
+    المنتجات المعتمدة
+  </h3>
+  <div style="margin-bottom: 24px;">
+    {{{itemsTableHtml}}}
+  </div>
+
+  <!-- Track Button -->
+  <div style="text-align: center; margin: 28px 0;">
+    <a href="{{frontendUrl}}/?order={{orderNumber}}#account/track" class="btn-primary" style="display: inline-block; background-color: #16a34a; color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700; padding: 14px 32px; border-radius: 10px; box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);">
+      متابعة حالة التجهيز 🛒
+    </a>
+  </div>
+</div>
+{{> footer}}

@@ -1,0 +1,125 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "User profile information",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string" },
+        "name": { "type": "string" },
+        "email": { "type": "string" },
+        "phone": { "type": "string" },
+        "address": { "type": "string" },
+        "points": { "type": "integer" },
+        "favoritesCount": { "type": "integer" },
+        "role": { "type": "string" },
+        "blocked": { "type": "boolean" },
+        "createdAt": { "type": "string" }
+      },
+      "required": ["uid", "name", "email"]
+    },
+    "Order": {
+      "title": "Order",
+      "description": "Customer order details",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userId": { "type": "string" },
+        "orderNumber": { "type": "string" },
+        "status": { "type": "string" },
+        "total": { "type": "number" },
+        "customerName": { "type": "string" },
+        "customerPhone": { "type": "string" },
+        "customerEmail": { "type": "string" },
+        "createdAt": { "type": "string" },
+        "date": { "type": "string" }
+      },
+      "required": ["id", "userId", "orderNumber", "status"]
+    },
+    "Review": {
+      "title": "Review",
+      "description": "Customer reviews and ratings",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "productId": { "type": "string" },
+        "orderId": { "type": "string" },
+        "rating": { "type": "integer" },
+        "comment": { "type": "string" },
+        "customerName": { "type": "string" },
+        "date": { "type": "string" },
+        "approved": { "type": "boolean" }
+      },
+      "required": ["id", "productId", "rating", "customerName"]
+    },
+    "UserCart": {
+      "title": "UserCart",
+      "description": "User synchronized cart data",
+      "type": "object",
+      "properties": {
+        "items": { "type": "array" },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "UserWishlist": {
+      "title": "UserWishlist",
+      "description": "User synchronized wishlist data",
+      "type": "object",
+      "properties": {
+        "items": { "type": "array" },
+        "updatedAt": { "type": "string" }
+      }
+    },
+    "ActivityLog": {
+      "title": "ActivityLog",
+      "description": "Admin activity audit trail logs",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string" },
+        "userEmail": { "type": "string" },
+        "actionType": { "type": "string" },
+        "title": { "type": "string" },
+        "createdAt": { "type": "string" }
+      }
+    },
+    "Config": {
+      "title": "Config",
+      "description": "Store runtime configuration documents",
+      "type": "object",
+      "properties": {
+        "data": { "type": "object" },
+        "updatedAt": { "type": "string" }
+      }
+    }
+  },
+  "firestore": {
+    "users/{userId}": {
+      "schema": "User",
+      "description": "User profiles collection"
+    },
+    "orders/{orderId}": {
+      "schema": "Order",
+      "description": "Orders collection"
+    },
+    "reviews/{reviewId}": {
+      "schema": "Review",
+      "description": "Reviews collection"
+    },
+    "user_carts/{userId}": {
+      "schema": "UserCart",
+      "description": "User shopping carts collection"
+    },
+    "user_wishlists/{userId}": {
+      "schema": "UserWishlist",
+      "description": "User wishlists collection"
+    },
+    "activity_logs/{logId}": {
+      "schema": "ActivityLog",
+      "description": "Admin activity audit logs collection"
+    },
+    "config/{documentId}": {
+      "schema": "Config",
+      "description": "Global store configuration documents collection"
+    }
+  }
+}

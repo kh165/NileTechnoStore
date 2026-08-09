@@ -1,0 +1,17 @@
+{
+  "short_name": "متجري",
+  "name": "متجري الذكي المتكامل",
+  "description": "منصتك الذكية المفضلة للتسوق عبر الإنترنت - منتجات أصلية، عروض حصرية، وتوصيل سريع",
+  "icons": [
+    {
+      "src": "/public/logo.jpg",
+      "type": "image/jpeg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "display": "standalone",
+  "orientation": "portrait"
+}

@@ -1,0 +1,61 @@
+{{> header}}
+<div style="text-align: right;">
+  <div style="display: inline-block; background-color: #e0e7ff; color: #3730a3; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 20px; margin-bottom: 16px;">
+    🛡️ تنبيه أمني - تسجيل دخول جديد
+  </div>
+  <h1 style="margin: 0 0 16px 0; color: #0f172a; font-size: 24px; font-weight: 800; line-height: 1.3;">
+    تم تسجيل الدخول إلى حسابك
+  </h1>
+  <p style="margin: 0 0 20px 0; color: #334155; font-size: 15px; line-height: 1.7;">
+    مرحباً {{customerName}}، نحيطك علماً بأنه تم تسجيل الدخول بنجاح إلى حسابك في متجر Nile Techno.
+  </p>
+
+  <!-- Login Details Box -->
+  <div style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 12px; padding: 20px; margin-bottom: 24px;">
+    <h3 style="margin: 0 0 14px 0; color: #072d5c; font-size: 15px; font-weight: 700; border-bottom: 1px solid #e2e8f0; padding-bottom: 8px;">تفاصيل عملية تسجيل الدخول:</h3>
+    <table role="presentation" border="0" cellpadding="6" cellspacing="0" width="100%" style="font-size: 14px; color: #334155;">
+      <tr>
+        <td style="font-weight: 700; color: #64748b; width: 35%;">تاريخ ووقت الدخول:</td>
+        <td style="font-weight: 600; color: #0f172a;">{{loginTime}}</td>
+      </tr>
+      {{#if browser}}
+      <tr>
+        <td style="font-weight: 700; color: #64748b;">المتصفح (Browser):</td>
+        <td style="font-weight: 600; color: #0f172a;">{{browser}}</td>
+      </tr>
+      {{/if}}
+      {{#if os}}
+      <tr>
+        <td style="font-weight: 700; color: #64748b;">نظام التشغيل (OS):</td>
+        <td style="font-weight: 600; color: #0f172a;">{{os}}</td>
+      </tr>
+      {{/if}}
+      {{#if ip}}
+      <tr>
+        <td style="font-weight: 700; color: #64748b;">عنوان الإنترنت (IP Address):</td>
+        <td style="font-weight: 600; color: #0f172a; font-family: monospace;">{{ip}}</td>
+      </tr>
+      {{/if}}
+      {{#if location}}
+      <tr>
+        <td style="font-weight: 700; color: #64748b;">الموقع الجغرافي:</td>
+        <td style="font-weight: 600; color: #0f172a;">{{location}}</td>
+      </tr>
+      {{/if}}
+    </table>
+  </div>
+
+  <div style="background-color: #fef2f2; border: 1px solid #fca5a5; border-radius: 10px; padding: 16px; margin-bottom: 24px;">
+    <p style="margin: 0; color: #991b1b; font-size: 13px; font-weight: 600; line-height: 1.6;">
+      ⚠️ إذا لم تقم بتسجيل الدخول بنفسك، يرجى تغيير كلمة المرور فوراً والتواصل مع فريق الدعم لحماية حسابك.
+    </p>
+  </div>
+
+  <!-- Action Button -->
+  <div style="text-align: center; margin: 24px 0 10px 0;">
+    <a href="{{frontendUrl}}/account" class="btn-primary" style="display: inline-block; background-color: #072d5c; color: #ffffff; text-decoration: none; font-size: 15px; font-weight: 700; padding: 12px 28px; border-radius: 8px;">
+      إدارة الحساب والأمان 🛡️
+    </a>
+  </div>
+</div>
+{{> footer}}

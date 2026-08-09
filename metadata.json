@@ -1,0 +1,6 @@
+{
+  "name": "NileTechno Store",
+  "description": "معرض NileTechno للمنتجات والخدمات البرمجية والرقمية الحديثة والمتميزة مع نظام تصفح وشراء آمن ومتطور.",
+  "requestFramePermissions": ["geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,29 @@
+{{> header}}
+<div style="text-align: right;">
+  <div style="display: inline-block; background-color: #dcfce7; color: #15803d; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 20px; margin-bottom: 16px;">
+    🎉 تم تسليم الطلب بنجاح
+  </div>
+  <h1 style="margin: 0 0 12px 0; color: #0f172a; font-size: 24px; font-weight: 800; line-height: 1.3;">
+    مبروك! تم تسليم طلبك، {{customerName}}
+  </h1>
+  <p style="margin: 0 0 20px 0; color: #334155; font-size: 15px; line-height: 1.7;">
+    تم تسليم طلبك رقم <strong style="color: #2563eb;">#{{orderNumber}}</strong> بنجاح. نأمل أن تنال المنتجات إعجابك وتلبي احتياجاتك على أكمل وجه!
+  </p>
+
+  <div style="background-color: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 12px; padding: 18px; margin-bottom: 24px;">
+    <p style="margin: 0; color: #166534; font-size: 14px; font-weight: 600; line-height: 1.6;">
+      نشكر ثقتك واختيارك لمتجر Nile Techno. يسعدنا جداً تقييمك لم تجربتك معنا ولمنتجات الطلب للمساعدة في تحسين خدماتنا باستمرار.
+    </p>
+  </div>
+
+  <div style="margin-bottom: 24px;">
+    {{{itemsTableHtml}}}
+  </div>
+
+  <div style="text-align: center; margin: 28px 0;">
+    <a href="{{frontendUrl}}/account?tab=orders" class="btn-primary" style="display: inline-block; background-color: #16a34a; color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700; padding: 14px 32px; border-radius: 10px; box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);">
+      تقييم المنتجات ⭐
+    </a>
+  </div>
+</div>
+{{> footer}}

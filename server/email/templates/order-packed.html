@@ -1,0 +1,36 @@
+{{> header}}
+<div style="text-align: right;">
+  <div style="display: inline-block; background-color: #e0e7ff; color: #3730a3; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 20px; margin-bottom: 16px;">
+    🎁 تم تغليف طلبك وجاهز للشحن
+  </div>
+  <h1 style="margin: 0 0 12px 0; color: #0f172a; font-size: 24px; font-weight: 800; line-height: 1.3;">
+    طلبك جاهز للانطلاق، {{customerName}}!
+  </h1>
+  <p style="margin: 0 0 20px 0; color: #334155; font-size: 15px; line-height: 1.7;">
+    تم فحص وتغليف جميع منتجات طلبك رقم <strong style="color: #2563eb;">#{{orderNumber}}</strong> بعناية فائقة وضمان حمايتها أثناء النقل. الطرد الآن في انتظار الاستلام من قِبل مندوب الشحن.
+  </p>
+
+  <div style="background-color: #f5f3ff; border: 1px solid #ddd6fe; border-radius: 12px; padding: 18px; margin-bottom: 24px;">
+    <table role="presentation" border="0" cellpadding="4" cellspacing="0" width="100%" style="font-size: 14px; color: #4c1d95;">
+      <tr>
+        <td style="font-weight: 700; width: 35%;">رقم الطلب:</td>
+        <td style="font-weight: 800; font-family: monospace;">#{{orderNumber}}</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 700;">حالة الطرد:</td>
+        <td style="font-weight: 800; color: #6d28d9;"><span style="background-color: #ddd6fe; padding: 3px 10px; border-radius: 12px; font-size: 12px;">تم التغليف وفي انتظار شركة الشحن</span></td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="margin-bottom: 24px;">
+    {{{itemsTableHtml}}}
+  </div>
+
+  <div style="text-align: center; margin: 28px 0;">
+    <a href="{{frontendUrl}}/?order={{orderNumber}}#account/track" class="btn-primary" style="display: inline-block; background-color: #6d28d9; color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700; padding: 14px 32px; border-radius: 10px; box-shadow: 0 4px 12px rgba(109, 40, 217, 0.25);">
+      تتبع الطرد 🎁
+    </a>
+  </div>
+</div>
+{{> footer}}

@@ -1,0 +1,36 @@
+{{> header}}
+<div style="text-align: right;">
+  <div style="display: inline-block; background-color: #f1f5f9; color: #334155; font-size: 13px; font-weight: 700; padding: 6px 14px; border-radius: 20px; margin-bottom: 16px;">
+    💳 تم معالجة واسترداد المبلغ
+  </div>
+  <h1 style="margin: 0 0 12px 0; color: #0f172a; font-size: 24px; font-weight: 800; line-height: 1.3;">
+    إشعار استرداد المبلغ، {{customerName}}
+  </h1>
+  <p style="margin: 0 0 20px 0; color: #334155; font-size: 15px; line-height: 1.7;">
+    تم معالجة استرداد المبلغ الخاص بطلبك رقم <strong style="color: #2563eb;">#{{orderNumber}}</strong> بنجاح.
+  </p>
+
+  <div style="background-color: #f8fafc; border: 1px solid #cbd5e1; border-radius: 12px; padding: 18px; margin-bottom: 24px;">
+    <table role="presentation" border="0" cellpadding="4" cellspacing="0" width="100%" style="font-size: 14px; color: #334155;">
+      <tr>
+        <td style="font-weight: 700; width: 35%;">رقم الطلب:</td>
+        <td style="font-weight: 800; font-family: monospace;">#{{orderNumber}}</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 700;">المبلغ المسترد:</td>
+        <td style="font-weight: 800; color: #16a34a; font-size: 16px;">{{totalPrice}} {{currency}}</td>
+      </tr>
+      <tr>
+        <td style="font-weight: 700;">طريقة الاسترداد:</td>
+        <td style="font-weight: 600;">حسب وسيلة الدفع الأصلية / محفظة الحساب</td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="text-align: center; margin: 28px 0;">
+    <a href="{{frontendUrl}}" class="btn-primary" style="display: inline-block; background-color: #072d5c; color: #ffffff; text-decoration: none; font-size: 16px; font-weight: 700; padding: 14px 32px; border-radius: 10px;">
+      تصفح المتجر 🛍️
+    </a>
+  </div>
+</div>
+{{> footer}}
